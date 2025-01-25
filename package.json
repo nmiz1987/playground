@@ -1,0 +1,59 @@
+{
+  "name": "playground",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Netanel Mizrahi",
+  "private": true,
+  "license": "MIT",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/getFiles.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn src/getFiles.ts",
+    "test": "jest",
+    "test:watchAll": "jest --watchAll",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "typeCheck": "tsc --noEmit",
+    "typeCheck-watch": "tsc --watch --noEmit",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "jest": {
+    "collectCoverage": false,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "prettier": "3.4.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
+}
