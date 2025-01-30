@@ -9,6 +9,3 @@ console.log('Before', obj);
 obj[SOME_KEY] = obj[SOME_KEY] ?? [];
 obj[SOME_KEY].push('new value');
 console.log('After', JSON.stringify(obj, null, 2));
-//--------------------------------
-
-console.log(process.cwd());
