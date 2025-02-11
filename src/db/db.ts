@@ -9,6 +9,9 @@ const db = new Database('./mydb.sqlite', { create: true });
 // db.query('CREATE TABLE IF NOT EXISTS users (name text, age int)').run();
 
 // show all tables in DB
+// const tables = db.query("SELECT name FROM sqlite_master WHERE type='table'").all();
+
+
 const table = db.query('SELECT * FROM users').all();
 console.log('Users table:');
 console.table(table);
